@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     card_contents: {
         flexDirection: 'column',
         width: '90%',
-        //backgroundColor: 'red',
     },
 
     school_text: {
