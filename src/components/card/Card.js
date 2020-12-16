@@ -1,21 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native'
-import styles from './CardStyle'
+import {Container, Contents, Title, SecondTitle, Paragraph} from './CardStyles'
 
 export default function Card(props){
     return(
-        <View style={styles.card_container}>
-            <View style={styles.card_contents}>
-                <Text style={styles.main_title_text}>{props.title}</Text>
+        <Container>
+            <Contents>
+                <Title>{props.title}</Title>
 
-                <Text style={styles.second_title_text}>{props.second_title}</Text>
+                <SecondTitle>{props.second_title}</SecondTitle>
 
-                <Text style={styles.paragraph_text}>{props.paragraph}</Text>
+                <Paragraph>{props.paragraph}</Paragraph>
 
-                <Text style={styles.second_title_text}>{props.another_title}</Text>
+                <SecondTitle>{props.another_title}</SecondTitle>
                     
-                <Text style={styles.paragraph_text}>{props.another_paragraph}</Text>
-            </View>
-        </View>
+                <Paragraph>{props.another_paragraph}</Paragraph>
+            </Contents>
+        </Container>
     )
 }

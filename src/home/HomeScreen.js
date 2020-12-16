@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './HomeScreenStyles'
-import { View, Text, Image, Alert, TouchableOpacity } from 'react-native';
-import {AntDesign} from '@expo/vector-icons/'
-import Card from '../components/card/Card'
+import {Alert, TouchableOpacity } from 'react-native';
+import {AntDesign} from '@expo/vector-icons/';
+import Card from '../components/card/Card';
+import {Container, Header, UserImage, Name, Profession, Icons} from './HomeScreenStyles'
 
 export default function Home(){
 
@@ -19,24 +19,15 @@ export default function Home(){
     }
 
     return(
-        <View style={styles.main_container}>
+        <Container >
+            <Header>
+                <UserImage source={require('../assets/user.jpg')}></UserImage>
 
-            <View style={styles.main_header}>
+                <Name>Demian Pabst Guapiano</Name>
 
-                <Image 
-                source={require('../assets/user.jpg')} 
-                style={styles.user_image}
-                ></Image>
+                <Profession>UI Designer e Desenvolvedor Iniciante</Profession>
 
-                <Text 
-                style={styles.my_name}>Demian Pabst Guapiano</Text>
-
-                <Text 
-                style={styles.my_profession}>UI Designer e Desenvolvedor Iniciante</Text>
-
-                <View 
-                style={styles.icons_container}>
-
+                <Icons>
                     <TouchableOpacity 
                     onPress={() => socialNetworks('github')}
                     >
@@ -56,25 +47,24 @@ export default function Home(){
                         ></AntDesign>
 
                     </TouchableOpacity>
-            
-                </View>
-            </View>
+                </Icons>
+            </Header>
 
             <Card 
             title="Formação"
             second_title="Técnico de Informática"
             paragraph="Cedup Hermann Hering"
-            another_title="Qualificação Profissional em Assistente Administrativo"
+            another_title="Aprendizagem Industrial em Assistente Administrativo"
             another_paragraph="SENAI/SC - Serviço Nacional de Aprendizagem Industrial"
             ></Card>
             
             <Card 
             title="Experiência Profissional"
-            second_title="Jovem Aprendiz em Vendas"
+            second_title="Jovem Aprendiz no setor de Vendas"
             paragraph="Cremer S.A"
-            another_title="Orientador"
+            another_title="Orientador Educacional"
             another_paragraph="Escola de Qualificação Profissional Master Premium"
             ></Card>
-        </View>
+        </Container>
     )
 }

@@ -1,44 +1,38 @@
-import React from 'react';
-import {StyleSheet} from 'react-native'
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-    main_container: {
-        flex: 1,
-        backgroundColor: '#f0f0f7',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+export const Container = styled.View `
+    flex: 1;
+    background-color: #f0f0f7;
+    justify-content: center;
+    align-items: center;
+`;
 
-    main_header: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',   
-    },
+export const Header = styled.View`
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+`;
 
-    user_image: {
-        width: 150,
-        height: 150,
-        borderRadius: 150,
-    },
+export const UserImage = styled.Image`
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+`;
 
-    my_name: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginTop: 20,
-    },
+export const Name = styled.Text`
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+`;
 
-    my_profession: {
-        fontSize: 16,
-        color: '#808080',
-    },
+export const Profession = styled.Text`
+    font-size: 16px;
+    color: #808080;
+`;
 
-    icons_container: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '20%',
-        marginTop: 20,
-    },
-    
-})
-
-export default styles;
+export const Icons = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 20px;
+`;
